@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "411781505228",
+    "firebase_url": "https://water-intake-journal.firebaseio.com",
+    "project_id": "water-intake-journal",
+    "storage_bucket": "water-intake-journal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411781505228:android:fd01693fa14c6157c8e269",
+        "android_client_info": {
+          "package_name": "com.example.waterintakejournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411781505228-slrittgbo0bgp5flph72gkfn2h6nce9k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.waterintakejournal",
+            "certificate_hash": "fe05b7ae35196b3585fc6626dcd10277d952a3b8"
+          }
+        },
+        {
+          "client_id": "411781505228-a7bo3vapkd30475ggar3godkhc2gb3gb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRixQ9EDT2hXMiig2j1sNHF_T57p5TyoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411781505228-a7bo3vapkd30475ggar3godkhc2gb3gb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

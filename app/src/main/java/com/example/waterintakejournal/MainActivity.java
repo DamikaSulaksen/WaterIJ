@@ -48,10 +48,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         btnView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myref = FirebaseDatabase.getInstance().getReference().child("WaterIntake/wi1");
+                myref = FirebaseDatabase.getInstance().getReference().child("WaterIntake").child("wi1");
                 myref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                             glassNum.setText(dataSnapshot.child("glassNum").getValue().toString());
                         }
                         else
-                            Toast.makeText(getApplicationContext(),"cannot find wi1",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"cannot find",Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -84,12 +86,12 @@ public class MainActivity extends AppCompatActivity {
                     else if (TextUtils.isEmpty(time.getText().toString()))
                         Toast.makeText(getApplicationContext(),"EmptyDate", Toast.LENGTH_LONG).show();
                     else if (TextUtils.isEmpty(glassNum.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "EmptyGlassNumber",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Empty Data",Toast.LENGTH_SHORT).show();
                     else {
                         wi.setDate(date.getText().toString().trim());
                         wi.setTime(time.getText().toString().trim());
-                        wi.setNumGlass(glassNum.getText().toString().trim());
-                        myref.child("wi1").setValue(wi);
+                        wi.setNumGlass(Integer.parseInt(glassNum.getText().toString().trim()));
+                        myref.push().setValue(wi);
                         Toast.makeText(getApplicationContext(),"Successfully Inserted", Toast.LENGTH_SHORT).show();
                         clearControls();
                     }

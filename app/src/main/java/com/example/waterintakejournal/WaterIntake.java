@@ -28,7 +28,7 @@ public class WaterIntake {
         return numGlass;
     }
 
-    public void setNumGlass(String numGlass) {
+    public void setNumGlass(int numGlass) {
         this.numGlass = numGlass;
     }
 }
